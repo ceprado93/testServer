@@ -19,7 +19,7 @@ exports.getPersonaList = (req, res) => {
     PersonaModel.getAllPersonas((err, persona) =>{
         console.log('Aqui estamos!');
         if(err)
-        res.send(err);
+        return res.send(err);
         console.log('Persona', persona);
         var cifradoTest = {
             iv: persona[0].iv_test,
@@ -31,7 +31,7 @@ exports.getPersonaList = (req, res) => {
             encryptedData: persona[0].resultado
         }
         console.log(decrypt(cifradoResultado));
-        res.send(persona);
+        return res.send(persona);
     })
 }
 
