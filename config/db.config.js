@@ -4,10 +4,10 @@ require('dotenv').config();
 // Creo la conexion con la base de datos
 const conexion = mysql.createPool({
     connectionLimit: 10,
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE
+    host: "ecstatic-chaum.217-76-139-104.plesk.page",
+    user: "pruebaroot",
+    password: "~51x4Mdj",
+    database: "TestCifrados"
 });
 
 conexion.getConnection((error) => {
